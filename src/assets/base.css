@@ -1,0 +1,13 @@
+body {
+  background-color: #0d131f;
+  color: white;
+  font-family: 'Road Rage', sans-serif;
+}
+
+:root {
+  --main-gradient: linear-gradient(89deg, #0d131f 13.69%, #a83a40 100%);
+}
+
+.bg-main-gradient {
+  background-image: var(--main-gradient);
+}

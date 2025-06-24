@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@import 'tailwindcss-primeui';
+@import './base.css';
+
+@theme {
+  --color-burgundy: #a83a40;
+  --color-dark: #0d131f;
+}
