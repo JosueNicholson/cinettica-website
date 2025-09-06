@@ -11,3 +11,7 @@ body {
 .bg-main-gradient {
   background-image: var(--main-gradient);
 }
+
+.text-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}

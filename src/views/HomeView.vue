@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import type HomeNavbar from '@/components/HomeNavbar.vue'
 import ShowCard from '@/components/ShowCard.vue'
-import MainLogo from '@/components/icons/MainLogo.vue'
+
 import SpotifyLogo from '@/components/icons/SpotifyLogo.vue'
 import type { Show } from '@/types/show'
 import { format } from 'date-fns'
@@ -36,7 +37,33 @@ const showsList: Array<Show> = [
   },
 ]
 
-const singlesList = []
+const singlesList = [
+  {
+    spotifyLink:
+      'https://open.spotify.com/intl-pt/track/7mDoXHLNpLXy6WpWyiEtJ7?si=9de02cc5edd54f25',
+    imageSource: '../../public/singles/silent-battle-wage.png',
+    id: 1,
+  },
+  {
+    spotifyLink:
+      'https://open.spotify.com/intl-pt/track/65odKvNFX4Ml4j4r8BxTHj?si=adda9885b92a46b5',
+    imageSource: '../../public/singles/lembrancas.png',
+    id: 2,
+  },
+  {
+    spotifyLink:
+      'https://open.spotify.com/intl-pt/track/3zxoag6lG4Empr5eZtJI1m?si=b52b3ac423ce4e7c',
+    imageSource: '../../public/singles/a-despedida.png',
+    id: 3,
+  },
+  {
+    spotifyLink:
+      'https://open.spotify.com/intl-pt/track/2OIYwlkyd9E2vH0R2m6cCa?si=ab97b962ac7a4e14',
+    imageSource: '../../public/singles/nada-pode-nos-parar.png',
+    id: 4,
+  },
+]
+
 const clipsList = [
   {
     src: 'uXIeRj4Rjzo',
@@ -55,12 +82,12 @@ const clipsList = [
     id: 4,
   },
 ]
-const newsList = []
+// const newsList = []
 </script>
 
 <template>
   <div class="landing-page p-3">
-    <MainLogo width="65" height="45"></MainLogo>
+    <HomeNavbar />
 
     <div class="flex flex-col items-center">
       <img src="../assets/cinettica-band-name-logo.png" alt="band-logo" />
@@ -123,11 +150,11 @@ const newsList = []
   <section class="p-3">
     <h3 class="text-5xl">Notícias</h3>
     <div class="flex overflow-auto gap-6">
-      <NewsCard v-for="news in newsList" :key="news.id" :data="news" />
+      <!-- <NewsCard v-for="news in newsList" :key="news.id" :data="news" /> -->
     </div>
   </section>
 
-  <section class="footer flex flex-col">
+  <section class="footer flex flex-col text-montserrat">
     <div class="flex flex-col items-center justify-center grow-1">
       <p class="text-3xl text-center font-bold md:w-1/2">
         Cadastre-se no nosso site e seja o primeiro a ficar por dentro das novidades
@@ -169,7 +196,6 @@ const newsList = []
 .footer {
   min-height: 100vh;
   position: relative;
-  font-family: 'Montserrat', sans-serif;
 
   &::before {
     content: '';
